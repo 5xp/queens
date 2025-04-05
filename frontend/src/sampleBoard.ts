@@ -16,7 +16,6 @@ const sampleBoard: boardType = sampleColorMap.map((row, ridx) =>
         return {
             color: c,
             playerStatus: "valid",
-            realStatus: "invalid",
             causes: [],
             row: ridx,
             column: cidx,

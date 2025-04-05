@@ -55,7 +55,7 @@ function FullGame() {
                         min={4}
                         max={10}
                         step={1}
-                        onChange={(e, value) => setBoardSize(value as number)}
+                        onChange={(_, value) => setBoardSize(value as number)}
                         valueLabelDisplay="off"
                         aria-labelledby="board-size-slider"
                     />
@@ -65,7 +65,7 @@ function FullGame() {
                         min={0}
                         max={10}
                         step={1}
-                        onChange={(e, value) => setDifficulty(value as number)}
+                        onChange={(_, value) => setDifficulty(value as number)}
                         valueLabelDisplay="off"
                         aria-labelledby="difficulty-slider"
                     />

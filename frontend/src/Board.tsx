@@ -1,8 +1,6 @@
 import { useCallback, useState, useRef, useMemo, useEffect } from "react";
 import Cell from "./Cell";
 import { boardType, boardPropType } from "shared";
-import _ from "lodash";
-
 import { updateBoard, updateCellOnDrag, undoEvent, emptyEventGroup, resetBoardState, addGroupToStack } from "shared";
 
 import rfdc from "rfdc";
