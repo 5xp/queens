@@ -160,7 +160,7 @@ const updateCellOnDrag = (
 
         return produce(board, draftBoard => {
             draftBoard[rowIndex][columnIndex].playerStatus = "valid";
-            draftBoard[rowIndex][columnIndex].causes.push("human");
+            draftBoard[rowIndex][columnIndex].causes = [];
         });
     }
 
