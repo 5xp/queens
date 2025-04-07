@@ -46,7 +46,7 @@ function Stopwatch(props: stopWatchPropTypes) {
 
     return (
         <div className="stopwatch">
-            <div className="display">{"solve time: " + formatTime()}</div>
+            <div className="display">⏱️{formatTime()}</div>
         </div>
     );
 }

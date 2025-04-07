@@ -35,15 +35,13 @@ function FullGame() {
     return (
         <div className="full-game">
             {/* displays the board if it's loaded, otherwise, displays a loading message */}
-            <div id="placeholder">
-                {loading ? (
-                    <div className="loading-message">loading...</div>
-                ) : (
-                    <>
-                        <Board board={board!} autoPlace={autoPlace}></Board>
-                    </>
-                )}
-            </div>
+            {loading ? (
+                <div className="loading-message">loading...</div>
+            ) : (
+                <>
+                    <Board board={board!} autoPlace={autoPlace}></Board>
+                </>
+            )}
 
             {/* if the board is loaded, display these components as well. */}
             {loading ? null : (

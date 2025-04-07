@@ -166,6 +166,14 @@ function Board(props: boardPropType) {
     return (
         // style board to be an nxn grid
         <div className="board-container">
+            <div className="board-header">
+                {/* Used for timing how long the player takes to solve */}
+                <Stopwatch isRunning={!validateSolution(board)} reset={didBoardChange}></Stopwatch>
+
+                {/* reset button */}
+                <button onClick={onResetButtonClick}>RESET</button>
+            </div>
+
             <div
                 className="board"
                 style={{ "--grid-size": `repeat(${board.length}, 1fr)` } as React.CSSProperties}
@@ -219,12 +227,6 @@ function Board(props: boardPropType) {
 
             {/* The Undo button */}
             <button onClick={onUndoButtonClick}>UNDO</button>
-
-            {/* reset button */}
-            <button onClick={onResetButtonClick}>RESET</button>
-
-            {/* Used for timing how long the player takes to solve */}
-            <Stopwatch isRunning={!validateSolution(board)} reset={didBoardChange}></Stopwatch>
         </div>
     );
 }
